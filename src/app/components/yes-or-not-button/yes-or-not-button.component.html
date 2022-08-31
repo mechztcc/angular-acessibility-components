@@ -1,17 +1,23 @@
-<div class="container">
-  <div class="button-group">
+<div role="radiogroup" class="container">
+  <div class="button-group" aria-labelledby="label">
     <button
+      role="radio"
+      [attr.aria-checked]="value === options.YES"
       class="button button-yes"
       type="button"
       [class.button-pressed]="value == options.YES"
-      (click)="activate(options.YES)">
+      (click)="activate(options.YES)"
+    >
       Yes
     </button>
     <button
+      role="radio"
+      [attr.aria-checked]="value === options.NO"
       class="button button-no"
       type="button"
       [class.button-pressed]="value == options.NO"
-      (click)="activate(options.NO)">
+      (click)="activate(options.NO)"
+    >
       No
     </button>
   </div>
