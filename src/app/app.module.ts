@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { YesOrNotButtonComponent } from './components/yes-or-not-button/yes-or-not-button.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    YesOrNotButtonComponent
   ],
   imports: [
     BrowserModule,

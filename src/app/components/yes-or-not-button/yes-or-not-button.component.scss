@@ -1,0 +1,30 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: bold;
+    font-size: 21px;
+  }
+}
+.button-group {
+  margin-top: 0.5rem;
+  .button {
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 18px;
+  }
+  .button-yes {
+    background-color: #00ADB5;
+    border-radius: 5px 0 0 5px;
+    color: white;
+  }
+  .button-no {
+    border-radius: 0 5px 5px 0;
+  }
+}
