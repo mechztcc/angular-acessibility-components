@@ -8,3 +8,22 @@ body {
 :focus {
   outline: 1px solid #EEEEEE;
 }
+
+$primary-color: #00adb5;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-weight: bold;
+    font-size: 21px;
+  }
+  i {
+    color: $primary-color;
+  }
+}
+
