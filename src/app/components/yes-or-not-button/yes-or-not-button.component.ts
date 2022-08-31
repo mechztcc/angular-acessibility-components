@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YesOrNotButtonComponent implements OnInit {
   value: string = 'no';
+  public options = OptionsButton;
 
   constructor() {}
 
@@ -15,4 +16,9 @@ export class YesOrNotButtonComponent implements OnInit {
   activate(value: string) {
     this.value = value;
   }
+}
+
+enum OptionsButton {
+  YES = 'yes',
+  NO = 'no',
 }

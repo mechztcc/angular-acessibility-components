@@ -1,20 +1,18 @@
 <div class="container">
-  <span>Are u ready for this ?</span>
+  <span>Are u ready for this ? <i>{{ value }}!</i></span>
   <div class="button-group">
     <button
       class="button button-yes"
       type="button"
-      [class.button-pressed]="value == 'yes'"
-      (click)="activate('yes')"
-    >
+      [class.button-pressed]="value == options.YES"
+      (click)="activate(options.YES)">
       Yes
     </button>
     <button
       class="button button-no"
       type="button"
-      [class.button-pressed]="value == 'no'"
-      (click)="activate('no')"
-    >
+      [class.button-pressed]="value == options.NO"
+      (click)="activate(options.NO)">
       No
     </button>
   </div>
