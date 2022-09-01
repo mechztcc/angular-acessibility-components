@@ -1,7 +1,7 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="container">
     <span
-      [id]="id"
+      [attr.label]="id"
       >Are u ready for this ?
       <i>{{ value }}</i>
     </span>

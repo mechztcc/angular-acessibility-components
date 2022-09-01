@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import * as uuid from 'uuid';
+import { UniqueIdService } from './services/unique-id.service';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +14,9 @@ export class AppComponent {
   id: string = null;
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private generateId: UniqueIdService) {
     this.initForm();
-    this.id = uuid.v1();
+    this.id = this.generateId.generateUniqueIdWithPrefix('label');
   }
 
   initForm() {
