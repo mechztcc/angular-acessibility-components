@@ -1,5 +1,5 @@
 <div role="radiogroup" class="container">
-  <div class="button-group" aria-labelledby="label">
+  <div class="button-group" [attr.aria-labelledby]="id">
     <button
       role="radio"
       [attr.aria-checked]="value === options.YES"

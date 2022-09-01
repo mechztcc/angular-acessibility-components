@@ -2,6 +2,7 @@ import {
   Component,
   EventEmitter,
   forwardRef,
+  Input,
   OnInit,
   Output,
 } from '@angular/core';
@@ -20,16 +21,20 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class YesOrNotButtonComponent implements OnInit, ControlValueAccessor {
+  @Input() id: string = null;
   @Output() valueChange = new EventEmitter<string>();
   value: string = 'no';
   public options = OptionsButton;
   public onChange = (value: string) => {};
   public onTouched = () => {};
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.id);
 
+  }
 
   writeValue(value: string): void {
     this.value = value;
@@ -48,11 +53,10 @@ export class YesOrNotButtonComponent implements OnInit, ControlValueAccessor {
     throw new Error('Method not implemented.');
   }
 
-
   activate(value: string) {
     this.value = value;
     this.valueChange.emit(this.value);
-    this.writeValue(this.value)
+    this.writeValue(this.value);
   }
 }
 

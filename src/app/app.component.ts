@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import * as uuid from 'uuid';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,12 @@ export class AppComponent {
   title = 'acessibility-components';
   value: string;
 
+  id: string = null;
   form: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.initForm();
+    this.id = uuid.v1();
   }
 
   initForm() {

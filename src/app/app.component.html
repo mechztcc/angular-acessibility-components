@@ -1,11 +1,12 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="container">
     <span
-      id="label"
+      [id]="id"
       >Are u ready for this ?
       <i>{{ value }}</i>
     </span>
     <app-yes-or-not-button
+      [id]="id"
       formControlName="content"
       (valueChange)="value = $event"
     ></app-yes-or-not-button>
