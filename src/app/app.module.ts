@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { YesOrNotButtonComponent } from './components/yes-or-not-button/yes-or-not-button.component';
+import { DisabledControllDirective } from './directives/disabled-controll/disabled-controll.directive';
 import { KeybordManagerItemDirective } from './directives/keyboard-manager/keybord-manager-item.directive';
 import { KeybordManagerDirective } from './directives/keyboard-manager/keybord-manager.directive';
 
@@ -14,6 +15,7 @@ import { KeybordManagerDirective } from './directives/keyboard-manager/keybord-m
     YesOrNotButtonComponent,
     KeybordManagerDirective,
     KeybordManagerItemDirective,
+    DisabledControllDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],

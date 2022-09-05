@@ -1,15 +1,15 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <div class="container">
-    <span
-      [attr.label]="id"
+    <span [attr.label]="id"
       >Are u ready for this ?
       <i>{{ value }}</i>
     </span>
     <app-yes-or-not-button
       [id]="id"
+      [appDisabledControll]="false"
       formControlName="content"
       (valueChange)="value = $event"
-      [disabled]="true"
+      [disabled]="false"
     ></app-yes-or-not-button>
     <button class="button">Submit</button>
   </div>

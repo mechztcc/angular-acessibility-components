@@ -49,7 +49,7 @@ export class YesOrNotButtonComponent implements OnInit, ControlValueAccessor {
   }
 
   setDisabledState?(isDisabled: boolean): void {
-    throw new Error('Method not implemented.');
+    this.disabled = isDisabled;
   }
 
   activate(value: string) {
