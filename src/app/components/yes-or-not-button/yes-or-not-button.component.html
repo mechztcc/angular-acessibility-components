@@ -1,8 +1,9 @@
 <div appKeybordManager role="radiogroup" class="container">
   <div class="button-group" [attr.aria-labelledby]="id">
     <button
-    (focused)="activate(options.YES)"
+      (focused)="activate(options.YES)"
       appKeybordManagerItem
+      [attr.disabled]="disabled ? disabled : null"
       [attr.tabindex]="value === options.YES ? 0 : -1"
       role="radio"
       [attr.aria-checked]="value === options.YES"
@@ -15,6 +16,7 @@
     </button>
     <button
       appKeybordManagerItem
+      [attr.disabled]="disabled ? disabled : null"
       (focused)="activate(options.NO)"
       [attr.tabindex]="value === options.NO ? 0 : -1"
       role="radio"

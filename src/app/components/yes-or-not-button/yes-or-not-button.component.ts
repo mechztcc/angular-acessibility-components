@@ -21,6 +21,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class YesOrNotButtonComponent implements OnInit, ControlValueAccessor {
+  @Input() disabled = false;
   @Input() id: string = null;
   @Output() valueChange = new EventEmitter<string>();
   value: string = 'no';
@@ -28,12 +29,10 @@ export class YesOrNotButtonComponent implements OnInit, ControlValueAccessor {
   public onChange = (value: string) => {};
   public onTouched = () => {};
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     console.log(this.id);
-
   }
 
   writeValue(value: string): void {
